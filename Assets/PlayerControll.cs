@@ -10,7 +10,14 @@ public class PlayerControll : MonoBehaviour
     float moveHor = 0f;
     bool jump = false;
     bool crouch = false;
+
+    CoinManagerScript coinManager;
     // Update is called once per frame
+    void Start()
+    {
+        coinManager = GameObject.Find("CoinManager").GetComponent<CoinManagerScript>();
+    }
+
     void Update()
     {
         moveHor = Input.GetAxis("Horizontal") * speed;
@@ -47,6 +54,15 @@ public class PlayerControll : MonoBehaviour
     {
         controller.Move(moveHor * Time.fixedDeltaTime,crouch,jump);
         jump = false;
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Coin")
+        {
+            coinManager.CollectedCoin();
+            Destroy(collision.gameObject);
+        }
     }
 }
 
