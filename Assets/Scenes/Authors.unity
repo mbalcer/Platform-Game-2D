@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 111313671}
   - component: {fileID: 111313670}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Author2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 446143900}
   - component: {fileID: 446143899}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Copyright3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 610733083}
   - component: {fileID: 610733082}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Copyright1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 713836183}
   - component: {fileID: 713836185}
   m_Layer: 0
-  m_Name: Image
+  m_Name: CloseButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -653,7 +653,7 @@ GameObject:
   - component: {fileID: 757697092}
   - component: {fileID: 757697091}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Copyright2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -726,7 +726,7 @@ GameObject:
   - component: {fileID: 819890740}
   - component: {fileID: 819890739}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Author1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -847,7 +847,7 @@ GameObject:
   - component: {fileID: 1594569985}
   - component: {fileID: 1594569984}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -920,7 +920,7 @@ GameObject:
   - component: {fileID: 1903292896}
   - component: {fileID: 1903292895}
   m_Layer: 0
-  m_Name: Image
+  m_Name: AuthorsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1077,7 +1077,7 @@ GameObject:
   - component: {fileID: 2134429494}
   - component: {fileID: 2134429493}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Author3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
