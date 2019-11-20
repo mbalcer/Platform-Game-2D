@@ -12,10 +12,12 @@ public class PlayerControll : MonoBehaviour
     bool crouch = false;
 
     CoinManagerScript coinManager;
+    GameManagerScript gameManager;
     // Update is called once per frame
     void Start()
     {
         coinManager = GameObject.Find("CoinManager").GetComponent<CoinManagerScript>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
     }
 
     void Update()
@@ -62,7 +64,12 @@ public class PlayerControll : MonoBehaviour
         {
             coinManager.CollectedCoin();
             Destroy(collision.gameObject);
+        } 
+        else if(collision.tag == "Chest")
+        {
+            gameManager.LoadLevels();
         }
     }
+
 }
 
