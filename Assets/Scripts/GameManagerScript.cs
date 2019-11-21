@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
+    private Vector3 POS_BEGIN_LVL1 = new Vector3((float)4.08, (float)0.92, 0);
+    private Vector3 POS_BEGIN_LVL2 = new Vector3((float)-8.9, (float)4.1, 0);
+    private Vector3 POS_BEGIN_LVL3 = new Vector3();
+
     private static bool created = false;
+    private Scene scene;
 
     private void Awake()
     {
@@ -19,7 +24,7 @@ public class GameManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        scene = SceneManager.GetActiveScene();
     }
 
     // Update is called once per frame
@@ -61,5 +66,23 @@ public class GameManagerScript : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+
+    public void ResetLevel(CharacterController2D player)
+    {
+        if(scene.name == "Level1")
+        {
+            player.transform.position = POS_BEGIN_LVL1;
+        }
+        else if(scene.name == "Level2")
+        {
+            player.transform.position = POS_BEGIN_LVL2;
+        }
+        else if (scene.name == "Level3")
+        {
+            player.transform.position = POS_BEGIN_LVL3;
+        }
+
+
     }
 }

@@ -1098,7 +1098,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.6449995, y: 1.0739999, z: -10}
+  m_LocalPosition: {x: 4.08, y: 1.0179999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1166,7 +1166,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567272089}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.6449995, y: 1.0739999, z: -10}
+  m_LocalPosition: {x: 4.08, y: 1.0179999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 669005591}
@@ -3875,15 +3875,6 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: 3, y: 1, z: 0}
-    second:
-      m_TileIndex: 11
-      m_TileSpriteIndex: 11
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
   - first: {x: 23, y: 1, z: 0}
     second:
       m_TileIndex: 7
@@ -4241,7 +4232,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 88a62d5a6cfa093418de10c5b8e2a9cd, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 43
+  - m_RefCount: 42
     m_Data: {fileID: 11400000, guid: 31fe60e7087e2244987d826e1a4aee17, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -4268,12 +4259,12 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: da4dd058e55b3db419089e862f504de5, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 43
+  - m_RefCount: 42
     m_Data: {fileID: 21300000, guid: 2c7014443e97a954eaf177ca46746c46, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 87010566091b425429b5b184b55f3c35, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 271
+  - m_RefCount: 270
     m_Data:
       e00: 1
       e01: 0
@@ -4292,7 +4283,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 271
+  - m_RefCount: 270
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5225,12 +5216,12 @@ PrefabInstance:
     - target: {fileID: 3096651710275260691, guid: a0c7e76548e847145a848194e9675d5b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.645
+      value: 4.08
       objectReference: {fileID: 0}
     - target: {fileID: 3096651710275260691, guid: a0c7e76548e847145a848194e9675d5b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.976
+      value: 0.92
       objectReference: {fileID: 0}
     - target: {fileID: 3096651710275260691, guid: a0c7e76548e847145a848194e9675d5b,
         type: 3}

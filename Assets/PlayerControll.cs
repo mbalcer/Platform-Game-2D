@@ -11,6 +11,7 @@ public class PlayerControll : MonoBehaviour
     bool jump = false;
     bool crouch = false;
 
+
     CoinManagerScript coinManager;
     GameManagerScript gameManager;
     // Update is called once per frame
@@ -68,6 +69,11 @@ public class PlayerControll : MonoBehaviour
         else if(collision.tag == "Chest")
         {
             gameManager.LoadLevels();
+        } 
+        else if(collision.tag == "Spike")
+        {
+            gameManager.ResetLevel(controller);
+            //TODO taking the player's life
         }
     }
 
