@@ -10,7 +10,7 @@ public class PlayerControll : MonoBehaviour
     float moveHor = 0f;
     bool jump = false;
     bool crouch = false;
-
+    Rigidbody2D rb;
 
     CoinManagerScript coinManager;
     GameManagerScript gameManager;
@@ -19,6 +19,7 @@ public class PlayerControll : MonoBehaviour
     {
         coinManager = GameObject.Find("CoinManager").GetComponent<CoinManagerScript>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -40,6 +41,7 @@ public class PlayerControll : MonoBehaviour
             animator.SetBool("IsCrouching", false);
             crouch = false;
         }
+
     }
    public void OnLanding()
     {
@@ -56,6 +58,7 @@ public class PlayerControll : MonoBehaviour
    public void FixedUpdate()
     {
         controller.Move(moveHor * Time.fixedDeltaTime,crouch,jump);
+
         jump = false;
     }
 
@@ -72,9 +75,18 @@ public class PlayerControll : MonoBehaviour
         } 
         else if(collision.tag == "Spike")
         {
+            HeartMenago.heartbroken();
             gameManager.ResetLevel(controller);
+           
             //TODO taking the player's life
         }
+        else if (collision.tag == "Dead")
+        {
+            HeartMenago.heartbroken();
+            gameManager.ResetLevel(controller);
+
+        }
+
     }
 
 }

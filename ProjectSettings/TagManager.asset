@@ -7,6 +7,7 @@ TagManager:
   - Coin
   - Chest
   - Spike
+  - Dead
   layers:
   - Default
   - TransparentFX

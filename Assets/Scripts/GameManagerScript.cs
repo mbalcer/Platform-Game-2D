@@ -8,15 +8,17 @@ public class GameManagerScript : MonoBehaviour
     private Vector3 POS_BEGIN_LVL1 = new Vector3((float)4.08, (float)0.92, 0);
     private Vector3 POS_BEGIN_LVL2 = new Vector3((float)-8.9, (float)4.1, 0);
     private Vector3 POS_BEGIN_LVL3 = new Vector3();
-
+    
+    public GameObject Heart, Heart1, Heart2;
     private static bool created = false;
     private Scene scene;
 
     private void Awake()
     {
+        
         if (!created)
         {
-            DontDestroyOnLoad(this.gameObject);
+          //  DontDestroyOnLoad(this.gameObject);
             created = true;
         }
     }
@@ -24,13 +26,17 @@ public class GameManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         scene = SceneManager.GetActiveScene();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2" || SceneManager.GetActiveScene().name == "Level3")
+        {
+            HeartManager();
+        };
     }
 
     public void LoadMenu()
@@ -84,5 +90,34 @@ public class GameManagerScript : MonoBehaviour
         }
 
 
+    }
+    public void HeartManager()
+    {
+
+        switch(HeartMenago.getHealth())
+        {
+            case 3:
+                Heart.gameObject.SetActive(true);
+                Heart1.gameObject.SetActive(true);
+                Heart2.gameObject.SetActive(true);
+                break;
+            case 2:
+                Heart.gameObject.SetActive(true);
+                Heart1.gameObject.SetActive(true);
+                Heart2.gameObject.SetActive(false);
+                break;
+            case 1:
+                Heart.gameObject.SetActive(true);
+                Heart1.gameObject.SetActive(false);
+                Heart2.gameObject.SetActive(false);
+                break;
+            case 0:
+                Heart.gameObject.SetActive(false);
+                Heart1.gameObject.SetActive(false);
+                Heart2.gameObject.SetActive(false);
+                HeartMenago.setHealth();
+                SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+                break;
+        }
     }
 }
