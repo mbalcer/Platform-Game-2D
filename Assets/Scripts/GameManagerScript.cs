@@ -46,31 +46,37 @@ public class GameManagerScript : MonoBehaviour
 
     public void LoadLevels()
     {
+        SoundManagerScript.PlaySound("menu");
         SceneManager.LoadScene("Levels", LoadSceneMode.Single);
     }
 
     public void LoadInfo()
     {
+        SoundManagerScript.PlaySound("menu");
         SceneManager.LoadScene("Authors", LoadSceneMode.Single);
     }
 
     public void Load1Level()
     {
+        SoundManagerScript.PlaySound("menu");
         SceneManager.LoadScene("Level1", LoadSceneMode.Single);
     }
 
     public void Load2Level()
     {
+        SoundManagerScript.PlaySound("menu");
         SceneManager.LoadScene("Level2", LoadSceneMode.Single);
     }
 
     public void Load3Level()
     {
+        SoundManagerScript.PlaySound("menu");
         SceneManager.LoadScene("Level3", LoadSceneMode.Single);
     }
 
     public void Exit()
     {
+        SoundManagerScript.PlaySound("menu");
         Application.Quit();
     }
 
