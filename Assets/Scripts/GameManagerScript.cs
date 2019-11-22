@@ -41,6 +41,7 @@ public class GameManagerScript : MonoBehaviour
 
     public void LoadMenu()
     {
+        
         SceneManager.LoadScene("Menu", LoadSceneMode.Single);
     }
 

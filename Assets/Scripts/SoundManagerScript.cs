@@ -6,10 +6,17 @@ public class SoundManagerScript : MonoBehaviour
 {
     public static AudioClip fallSound, jumpSound, completeSound, pickUpSound, hitSound, menuSound;
     public static AudioSource audioSrc;
+    private static int createdSound= 0;
     // Start is called before the first frame update
     void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+      
+            DontDestroyOnLoad(this.gameObject);
+          
+          //  createdSound++;
+        
+        
+    
     }
     void Start()
     {
@@ -23,6 +30,8 @@ public class SoundManagerScript : MonoBehaviour
     }
 
     // Update is called once per frame
+
+
     void Update()
     {
         
