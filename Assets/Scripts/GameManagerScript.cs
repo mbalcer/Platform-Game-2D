@@ -7,7 +7,7 @@ public class GameManagerScript : MonoBehaviour
 {
     private Vector3 POS_BEGIN_LVL1 = new Vector3((float)4.08, (float)0.92, 0);
     private Vector3 POS_BEGIN_LVL2 = new Vector3((float)-8.9, (float)4.1, 0);
-    private Vector3 POS_BEGIN_LVL3 = new Vector3();
+    private Vector3 POS_BEGIN_LVL3 = new Vector3((float)-25.0, (float)5.1, 0);
     
     public GameObject Heart, Heart1, Heart2;
     private static bool created = false;
