@@ -83,7 +83,8 @@ public class GameManagerScript : MonoBehaviour
 
     public void ResetLevel(CharacterController2D player)
     {
-        if(scene.name == "Level1")
+        player.transform.Translate(new Vector3(0, 0, 0));
+        if (scene.name == "Level1")
         {
             player.transform.position = POS_BEGIN_LVL1;
         }
