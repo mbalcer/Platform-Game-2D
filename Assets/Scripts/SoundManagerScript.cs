@@ -11,9 +11,12 @@ public class SoundManagerScript : MonoBehaviour
     void Awake()
     {
       
-            DontDestroyOnLoad(this.gameObject);
-          
-          //  createdSound++;
+/*            DontDestroyOnLoad(this.gameObject);
+          // Jak to się odkomentuje to przy przejsciu z menu do innej sceny ten skrypt zostaje, jakby przekazywany jest dalej, ale jak się cofnie z levels do menu to skrypt się duplikuje
+          // i dzwieki w tle sie nakladaja
+          // Do każdej sceny teraz skopiowałem SoundManager(asset) - to jest jakies rozwiazanie ale muzyka za kazdym przejściem między scenami zaczyna się od nowa
+          // Jak ktoś ma jakiś sposób jak to naprawić to śmiało
+          //  createdSound++;*/
         
         
     
