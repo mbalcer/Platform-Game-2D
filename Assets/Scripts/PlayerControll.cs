@@ -19,6 +19,7 @@ public class PlayerControll : MonoBehaviour
 
     CoinManagerScript coinManager;
     GameManagerScript gameManager;
+
     // Update is called once per frame
     void Start()
     {
@@ -32,26 +33,26 @@ public class PlayerControll : MonoBehaviour
     {
         moveHor = Input.GetAxis("Horizontal") * speed;
         animator.SetFloat("Speed", Mathf.Abs(moveHor));
-       // Debug.Log(GameObject.Find("Chest").transform.position.x - GameObject.Find("Player").transform.position.x);
         animatorChest.SetFloat("DifferenceX", GameObject.Find("Chest").transform.position.x - GameObject.Find("Player").transform.position.x);
-        if (coinManager.Money >= 10)
+
+        if (CoinManagerScript.GetMoney() >= 10)
         {
-
-
             animatorChest.SetBool("open", true);
         }
 
-            if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             jump = true;
             animator.SetBool("IsJumping", true);
             SoundManagerScript.PlaySound("jump");
         }
+
         if (Input.GetButtonDown("Crouch"))
         {
             animator.SetBool("IsCrouching", true);
             crouch = true;
         }
+
         else if (Input.GetButtonUp("Crouch"))
         {
             animator.SetBool("IsCrouching", false);
@@ -61,21 +62,17 @@ public class PlayerControll : MonoBehaviour
 
     public void OnLanding()
     {
-
         animator.SetBool("IsJumping", false);
     }
 
     public void OnCrouching(bool isCrouching)
     {
-
         animator.SetBool("IsCrouching", isCrouching);
-
     }
 
     public void FixedUpdate()
     {
         controller.Move(moveHor * Time.fixedDeltaTime, crouch, jump);
-
         jump = false;
     }
 
@@ -90,15 +87,10 @@ public class PlayerControll : MonoBehaviour
 
         else if (collision.tag == "Chest")
         {
-            if (coinManager.Money >= 10)
+            if (CoinManagerScript.GetMoney() >= 10)
             {
-                
-            
                 animatorChest.SetBool("open", true);
-
-                //TODO: przerwa w działaniu. To poniżej nie działa...
-                //StartCoroutine(Wait());
-
+                
                 if(SceneManager.GetActiveScene().name == "Level1")
                 {
                     LevelsManager.setLevel2();
@@ -119,22 +111,14 @@ public class PlayerControll : MonoBehaviour
             SoundManagerScript.PlaySound("hit");
             HeartMenago.heartbroken();
             gameManager.ResetLevel(controller);
-
-            //TODO taking the player's life
         }
 
         else if (collision.tag == "Dead")
         {
-
             HeartMenago.heartbroken();
             gameManager.ResetLevel(controller);
             SoundManagerScript.PlaySound("fall");
         }
-    }
-
-    IEnumerator Wait()
-    {
-        yield return new WaitForSeconds(3);
     }
 }
 

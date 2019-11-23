@@ -16,15 +16,13 @@ public class GameManagerScript : MonoBehaviour
 
     public GameObject Level2, Level3;
     private bool level2, level3;
-    private int points;
+    private float points;
     private Text Points;
    
     private void Awake()
     {
-        
         if (!created)
         {
-          //  DontDestroyOnLoad(this.gameObject);
             created = true;
         }
     }
@@ -37,6 +35,11 @@ public class GameManagerScript : MonoBehaviour
         if (scene.name == "Levels")
         {
             LevelsManagement();
+        }
+
+        else if (scene.name == "GameOver")
+        {
+            GameOverManagement();
         }
     }
 
@@ -51,7 +54,6 @@ public class GameManagerScript : MonoBehaviour
 
     public void LoadMenu()
     {
-        
         SceneManager.LoadScene("Menu", LoadSceneMode.Single);
     }
 
@@ -94,14 +96,17 @@ public class GameManagerScript : MonoBehaviour
     public void ResetLevel(CharacterController2D player)
     {
         player.transform.Translate(new Vector3(0, 0, 0));
+
         if (scene.name == "Level1")
         {
             player.transform.position = POS_BEGIN_LVL1;
         }
+
         else if(scene.name == "Level2")
         {
             player.transform.position = POS_BEGIN_LVL2;
         }
+
         else if (scene.name == "Level3")
         {
             player.transform.position = POS_BEGIN_LVL3;
@@ -117,16 +122,19 @@ public class GameManagerScript : MonoBehaviour
                 Heart1.gameObject.SetActive(true);
                 Heart2.gameObject.SetActive(true);
                 break;
+
             case 2:
                 Heart.gameObject.SetActive(true);
                 Heart1.gameObject.SetActive(true);
                 Heart2.gameObject.SetActive(false);
                 break;
+
             case 1:
                 Heart.gameObject.SetActive(true);
                 Heart1.gameObject.SetActive(false);
                 Heart2.gameObject.SetActive(false);
                 break;
+
             default:
                 Heart.gameObject.SetActive(false);
                 Heart1.gameObject.SetActive(false);
@@ -139,6 +147,8 @@ public class GameManagerScript : MonoBehaviour
 
     public void LevelsManagement()
     {
+        CoinManagerScript.ResetMoney();
+
         level2 = LevelsManager.getLevel2();
         level3 = LevelsManager.getLevel3();
 
@@ -161,6 +171,13 @@ public class GameManagerScript : MonoBehaviour
         }
 
         points = LevelsManager.getPoints();
+        Points = GameObject.Find("PointsText").GetComponent<Text>();
+        Points.text = points.ToString();
+    }
+
+    public void GameOverManagement()
+    {
+        points = CoinManagerScript.GetMoney();
         Points = GameObject.Find("PointsText").GetComponent<Text>();
         Points.text = points.ToString();
     }

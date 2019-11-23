@@ -5,11 +5,20 @@ using UnityEngine.UI;
 
 public class CoinManagerScript : MonoBehaviour
 {
-    private float money = 0;
-    public float Money => money;
+    private static float money = 0;
     private Text coins;
     private Animator animatorCoin;
 
+    public static float GetMoney()
+    {
+        return money;
+    }
+
+    public static void ResetMoney()
+    {
+        money = 0;
+    }
+    
     public void CollectedCoin()
     {
         money += 1;
