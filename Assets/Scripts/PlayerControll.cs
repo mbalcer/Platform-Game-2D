@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControll : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class PlayerControll : MonoBehaviour
     bool jump = false;
     bool crouch = false;
     bool finish = false;
-    Rigidbody2D rb;
+    Rigidbody2D rb; 
 
     CoinManagerScript coinManager;
     GameManagerScript gameManager;
@@ -87,6 +88,16 @@ public class PlayerControll : MonoBehaviour
 
                 //TODO: przerwa w działaniu. To poniżej nie działa...
                 //StartCoroutine(Wait());
+
+                if(SceneManager.GetActiveScene().name == "Level1")
+                {
+                    LevelsManager.setLevel2();
+                }
+
+                else if (SceneManager.GetActiveScene().name == "Level2")
+                {
+                    LevelsManager.setLevel3();
+                }
 
                 gameManager.LoadLevels();
                 SoundManagerScript.PlaySound("complete");

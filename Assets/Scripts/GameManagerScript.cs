@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManagerScript : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class GameManagerScript : MonoBehaviour
     private static bool created = false;
     private Scene scene;
 
+    public GameObject Level2, Level3;
+    private bool level2, level3;
+    private int points;
+    private Text Points;
+   
     private void Awake()
     {
         
@@ -26,8 +32,12 @@ public class GameManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         scene = SceneManager.GetActiveScene();
+
+        if (scene.name == "Levels")
+        {
+            LevelsManagement();
+        }
     }
 
     // Update is called once per frame
@@ -36,7 +46,7 @@ public class GameManagerScript : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2" || SceneManager.GetActiveScene().name == "Level3")
         {
             HeartManager();
-        };
+        }
     }
 
     public void LoadMenu()
@@ -96,12 +106,10 @@ public class GameManagerScript : MonoBehaviour
         {
             player.transform.position = POS_BEGIN_LVL3;
         }
-
-
     }
+
     public void HeartManager()
     {
-
         switch(HeartMenago.getHealth())
         {
             case 3:
@@ -127,5 +135,33 @@ public class GameManagerScript : MonoBehaviour
                 SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
                 break;
         }
+    }
+
+    public void LevelsManagement()
+    {
+        level2 = LevelsManager.getLevel2();
+        level3 = LevelsManager.getLevel3();
+
+        if (!level2)
+        {
+            Level2.gameObject.SetActive(false);
+            Level3.gameObject.SetActive(false);
+        }
+
+        else if(!level3)
+        {
+            Level2.gameObject.SetActive(true);
+            Level3.gameObject.SetActive(false);
+        }
+
+        else
+        {
+            Level2.gameObject.SetActive(true);
+            Level3.gameObject.SetActive(true);
+        }
+
+        points = LevelsManager.getPoints();
+        Points = GameObject.Find("PointsText").GetComponent<Text>();
+        Points.text = points.ToString();
     }
 }

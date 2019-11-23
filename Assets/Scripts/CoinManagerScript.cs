@@ -13,6 +13,7 @@ public class CoinManagerScript : MonoBehaviour
     public void CollectedCoin()
     {
         money += 1;
+        LevelsManager.setPoints();
 
         coins = GameObject.Find("Coins").GetComponent<Text>();
         coins.text = money.ToString();
