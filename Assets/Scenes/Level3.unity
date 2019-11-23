@@ -6941,11 +6941,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5d6e42b338547477aa7a88708f894463, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -7787,6 +7787,8 @@ MonoBehaviour:
   Heart: {fileID: 617572233}
   Heart1: {fileID: 23590823}
   Heart2: {fileID: 623351271}
+  Level2: {fileID: 0}
+  Level3: {fileID: 0}
 --- !u!4 &970142491
 Transform:
   m_ObjectHideFlags: 0
