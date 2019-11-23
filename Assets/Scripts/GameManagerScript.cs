@@ -127,7 +127,7 @@ public class GameManagerScript : MonoBehaviour
                 Heart1.gameObject.SetActive(false);
                 Heart2.gameObject.SetActive(false);
                 break;
-            case 0:
+            default:
                 Heart.gameObject.SetActive(false);
                 Heart1.gameObject.SetActive(false);
                 Heart2.gameObject.SetActive(false);
