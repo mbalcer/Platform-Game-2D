@@ -11,6 +11,7 @@ public class PlayerControll : MonoBehaviour
     float moveHor = 0f;
     bool jump = false;
     bool crouch = false;
+    bool finish = false;
     Rigidbody2D rb;
 
     CoinManagerScript coinManager;
@@ -75,10 +76,11 @@ public class PlayerControll : MonoBehaviour
         } 
         else if(collision.tag == "Chest")
         {
-          
-            gameManager.LoadLevels();
-            SoundManagerScript.PlaySound("complete");
-
+            if(coinManager.Money >= 10)
+            {
+                gameManager.LoadLevels();
+                SoundManagerScript.PlaySound("complete");
+            }
         } 
         else if(collision.tag == "Spike")
         {

@@ -439,7 +439,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a39c44115993554e8d1d6c94f91b5d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: {fileID: 0}
 --- !u!4 &314052176
 Transform:
   m_ObjectHideFlags: 0
@@ -1251,7 +1250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.0799994, y: 1.0179999, z: -10}
+  m_LocalPosition: {x: 4.08, y: 1.0179999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1319,7 +1318,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567272089}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.0799994, y: 1.0179999, z: -10}
+  m_LocalPosition: {x: 4.08, y: 1.0179999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 669005591}
@@ -1610,7 +1609,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a39c44115993554e8d1d6c94f91b5d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: {fileID: 852578538}
 --- !u!1 &995648750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1932,6 +1930,17 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6887956959878067801, guid: b2dadfbf433f0774da898aa76352eb30,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: abb78425222b01f448bec93a2777292e,
+        type: 3}
+    - target: {fileID: 6887956959878067800, guid: b2dadfbf433f0774da898aa76352eb30,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e591dff471802ef458369d8f3afcae85, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2dadfbf433f0774da898aa76352eb30, type: 3}
 --- !u!1 &1152622280

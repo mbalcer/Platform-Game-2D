@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class CoinManagerScript : MonoBehaviour
 {
     private float money = 0;
-    public Text coins;
+    public float Money => money;
+    private Text coins;
+    private Animator animator;
 
     public void CollectedCoin()
     {
@@ -14,5 +16,11 @@ public class CoinManagerScript : MonoBehaviour
 
         coins = GameObject.Find("Coins").GetComponent<Text>();
         coins.text = money.ToString();
+        
+        if (money >= 10)
+        {
+            animator = GameObject.Find("Coin").GetComponent<Animator>();
+            animator.SetBool("finish", true);
+        }
     }
 }
