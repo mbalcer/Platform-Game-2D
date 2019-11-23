@@ -24,6 +24,7 @@ public class PlayerControll : MonoBehaviour
     {
         coinManager = GameObject.Find("CoinManager").GetComponent<CoinManagerScript>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
+        animatorChest = GameObject.Find("Chest").GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -31,8 +32,16 @@ public class PlayerControll : MonoBehaviour
     {
         moveHor = Input.GetAxis("Horizontal") * speed;
         animator.SetFloat("Speed", Mathf.Abs(moveHor));
+       // Debug.Log(GameObject.Find("Chest").transform.position.x - GameObject.Find("Player").transform.position.x);
+        animatorChest.SetFloat("DifferenceX", GameObject.Find("Chest").transform.position.x - GameObject.Find("Player").transform.position.x);
+        if (coinManager.Money >= 10)
+        {
 
-        if (Input.GetButtonDown("Jump"))
+
+            animatorChest.SetBool("open", true);
+        }
+
+            if (Input.GetButtonDown("Jump"))
         {
             jump = true;
             animator.SetBool("IsJumping", true);
@@ -83,7 +92,8 @@ public class PlayerControll : MonoBehaviour
         {
             if (coinManager.Money >= 10)
             {
-                animatorChest = GameObject.Find("Chest").GetComponent<Animator>();
+                
+            
                 animatorChest.SetBool("open", true);
 
                 //TODO: przerwa w działaniu. To poniżej nie działa...
