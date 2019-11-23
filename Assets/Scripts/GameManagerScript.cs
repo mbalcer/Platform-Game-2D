@@ -144,20 +144,20 @@ public class GameManagerScript : MonoBehaviour
 
         if (!level2)
         {
-            Level2.gameObject.SetActive(false);
-            Level3.gameObject.SetActive(false);
+            Level2.GetComponent<Button>().interactable = false;
+            Level3.GetComponent<Button>().interactable = false;
         }
 
         else if(!level3)
         {
-            Level2.gameObject.SetActive(true);
-            Level3.gameObject.SetActive(false);
+            Level2.GetComponent<Button>().interactable = true;
+            Level3.GetComponent<Button>().interactable = false;
         }
 
         else
         {
-            Level2.gameObject.SetActive(true);
-            Level3.gameObject.SetActive(true);
+            Level2.GetComponent<Button>().interactable = true;
+            Level3.GetComponent<Button>().interactable = true;
         }
 
         points = LevelsManager.getPoints();
