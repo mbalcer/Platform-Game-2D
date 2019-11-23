@@ -8,7 +8,7 @@ public class CoinManagerScript : MonoBehaviour
     private float money = 0;
     public float Money => money;
     private Text coins;
-    private Animator animator;
+    private Animator animatorCoin;
 
     public void CollectedCoin()
     {
@@ -19,8 +19,8 @@ public class CoinManagerScript : MonoBehaviour
         
         if (money >= 10)
         {
-            animator = GameObject.Find("Coin").GetComponent<Animator>();
-            animator.SetBool("finish", true);
+            animatorCoin = GameObject.Find("Coin").GetComponent<Animator>();
+            animatorCoin.SetBool("finish", true);
         }
     }
 }

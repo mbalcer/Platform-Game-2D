@@ -4,22 +4,22 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 21300000
-    second: 2048x512_0
+    second: chest1
   - first:
       213: 21300002
-    second: 2048x512_1
+    second: chest2
   - first:
       213: 21300004
-    second: 2048x512_2
+    second: chest3
   - first:
       213: 21300006
-    second: 2048x512_3
+    second: chest4
   - first:
       213: 21300008
-    second: 2048x512_4
+    second: chest5
   - first:
       213: 21300010
-    second: 2048x512_5
+    second: chest6
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -188,7 +188,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2048x512_0
+      name: chest1
       rect:
         serializedVersion: 2
         x: 126
@@ -196,7 +196,7 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -209,7 +209,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2048x512_1
+      name: chest2
       rect:
         serializedVersion: 2
         x: 434
@@ -217,7 +217,7 @@ TextureImporter:
         width: 256
         height: 266
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,7 +230,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2048x512_2
+      name: chest3
       rect:
         serializedVersion: 2
         x: 742
@@ -238,7 +238,7 @@ TextureImporter:
         width: 256
         height: 276
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -251,15 +251,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2048x512_3
+      name: chest4
       rect:
         serializedVersion: 2
         x: 1050
-        y: 128
+        y: 127
         width: 256
         height: 292
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -272,7 +272,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2048x512_4
+      name: chest5
       rect:
         serializedVersion: 2
         x: 1358
@@ -280,7 +280,7 @@ TextureImporter:
         width: 256
         height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -293,7 +293,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2048x512_5
+      name: chest6
       rect:
         serializedVersion: 2
         x: 1666
@@ -301,7 +301,7 @@ TextureImporter:
         width: 256
         height: 304
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -316,7 +316,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ebf32bdbe6c54734bb1444f014786834
     internalID: 0
     vertices: []
     indices: 
