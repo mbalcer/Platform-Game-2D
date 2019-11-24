@@ -11,6 +11,12 @@ public class HeartMenago : MonoBehaviour
     {
         health -= 1;
     }
+
+    public static void ResetHealth()
+    {
+        health = 3;
+    }
+
     public static void setHealth()
     {
        if(health==0)
@@ -26,6 +32,7 @@ public class HeartMenago : MonoBehaviour
             health = 0;
         }
     }
+
     public static int getHealth()
     {
         return health;

@@ -148,6 +148,7 @@ public class GameManagerScript : MonoBehaviour
     public void LevelsManagement()
     {
         CoinManagerScript.ResetMoney();
+        HeartMenago.ResetHealth();
 
         level2 = LevelsManager.getLevel2();
         level3 = LevelsManager.getLevel3();
